@@ -3,5 +3,16 @@
 <%= render @restaurant %>
 
 <h1>Restaurant Reviews</h1>
+<ul>
+  <% @restaurant.reviews.each do |review| %>
+    <li> Rating:
+    <%= review.rating %>
+    </li>
+      <li> Review:
+    <%= review.content %>
+    </li>
+  <% end %>
+</ul>
 
 <%= link_to 'List of Restaurants', restaurants_path %>
+<%= link_to "New Review", review_new_path(@restaurant) %>
