@@ -1,7 +1,7 @@
-<h1>Restaurant:<%=  @restaurant.name %></h1>
-<h1>Address:<%= @restaurant.address %></h1>
-<h1>Phone number:<%= @restaurant.phone_number %></h1>
-<h1>Category:<%= @restaurant.category %></h1>
+<p style="color: green"><%= notice %></p>
 
+<%= render @restaurant %>
+
+<h1>Restaurant Reviews</h1>
 
 <%= link_to 'List of Restaurants', restaurants_path %>

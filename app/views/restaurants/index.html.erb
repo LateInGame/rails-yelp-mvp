@@ -1,7 +1,7 @@
-<h1>List of Restaurants</h1>
+<p style="color: green"><%= notice %></p>
 
-<ul>
-  <% @restaurants.each do |restaurant|%>
-    <li> <%= link_to restaurant.name, restaurant_path(restaurant) %> </li>
-  <%  end %>
-</ul>
+<h1>Restaurants</h1>
+
+<%= render "restaurants/list", restaurants: @restaurants %>
+
+<%= link_to 'Create new Restaurant', restaurants_new_path %>
